@@ -24,7 +24,7 @@ extern "C" {
 #include "Dynamics/Joints/b2WheelJointJsBindings.h"
 #include "Particle/b2ParticleGroupJsBindings.h"
 #include "Particle/b2ParticleSystemJsBindings.h"
-void GenerateOffsets();
+void GenerateOffsets() {}
 }
 #include "Collision/b2CollisionJsBindings.cpp"
 #include "Collision/Shapes/b2ChainShapeJsBindings.cpp"

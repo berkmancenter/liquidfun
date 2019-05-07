@@ -123,8 +123,7 @@ B2FRICTIONJOINT = \
 
 B2GEARJOINT = \
 	'_b2GearJoint_GetRatio', \
-	'_b2GearJointDef_Create', \
-	'_b2GearJointDef_InitializeAndCreate'
+	'_b2GearJointDef_Create' \
 
 B2JOINT = \
 	'_b2Joint_GetBodyA', \
@@ -149,6 +148,7 @@ B2PARTICLEGROUP = \
 
 B2PARTICLESYSTEM = \
 	'_b2ParticleSystem_CreateParticle', \
+	'_b2ParticleSystem_ParticleApplyForce', \
 	'_b2ParticleSystem_GetColorBuffer', \
 	'_b2ParticleSystem_GetParticleCount', \
 	'_b2ParticleSystem_GetParticleLifetime', \

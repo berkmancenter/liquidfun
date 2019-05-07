@@ -18,6 +18,11 @@ double b2ParticleSystem_CreateParticle(void* particleSystem,
   return ((b2ParticleSystem*)particleSystem)->CreateParticle(def);
 }
 
+void b2ParticleSystem_ParticleApplyForce(
+    void* particleSystem, int index, double forceX, double forceY) {
+  ((b2ParticleSystem*)particleSystem)->ParticleApplyForce(index, b2Vec2(forceX, forceY));
+}
+
 // Shapes array is not currently supported for b2ParticleSystems
 
 void* b2ParticleSystem_GetColorBuffer(void* particleSystem) {

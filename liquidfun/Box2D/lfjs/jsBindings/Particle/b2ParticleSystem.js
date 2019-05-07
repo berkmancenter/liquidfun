@@ -31,6 +31,10 @@ var b2ParticleSystem_CreateParticle =
     'number', 'number', 'number'
   ]);
 
+var b2ParticleSystem_ParticleApplyForce =
+  Module.cwrap('b2ParticleSystem_ParticleApplyForce', 'null',
+    ['number', 'number', 'number', 'number']);
+
 var b2ParticleSystem_GetColorBuffer =
   Module.cwrap('b2ParticleSystem_GetColorBuffer', 'number', ['number']);
 
@@ -81,6 +85,10 @@ b2ParticleSystem.prototype.CreateParticle = function(pd) {
     pd.color.a, pd.flags, pd.group,
     pd.lifetime, pd.position.x, pd.position.y,
     pd.userData, pd.velocity.x, pd.velocity.y);
+};
+
+b2ParticleSystem.ParticleApplyForce = function(index, force) {
+  b2ParticleSystem_ParticleApplyForce(this.ptr, index, force.x, force.y)
 };
 
 b2ParticleSystem.prototype.CreateParticleGroup = function(pgd) {
