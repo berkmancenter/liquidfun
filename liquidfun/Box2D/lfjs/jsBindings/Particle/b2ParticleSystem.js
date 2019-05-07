@@ -87,7 +87,7 @@ b2ParticleSystem.prototype.CreateParticle = function(pd) {
     pd.userData, pd.velocity.x, pd.velocity.y);
 };
 
-b2ParticleSystem.ParticleApplyForce = function(index, force) {
+b2ParticleSystem.prototype.ParticleApplyForce = function(index, force) {
   b2ParticleSystem_ParticleApplyForce(this.ptr, index, force.x, force.y)
 };
 
